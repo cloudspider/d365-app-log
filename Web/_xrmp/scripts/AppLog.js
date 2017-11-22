@@ -1,5 +1,3 @@
-/// <reference path="../XRMLib/XrmLib.js" />
-
 var AppLog = (function () {
 
     var enescapeHtml = function (s) {
@@ -42,6 +40,20 @@ var AppLog = (function () {
 
             }
         },
+
+        // 1 = log, 2 = info, 3 = warn, 4 = error
+
+        log: function (event, details, entityName) {
+            
+            AppLog.logEvent(event, 1, details, entityName);
+            console.info(event + "\n" + entityName + "\n" + details);
+        },          
+
+        logInfo: function (event, details, entityName) {
+            
+            AppLog.logEvent(event, 2, details, entityName);
+            console.info(event + "\n" + entityName + "\n" + details);
+        },        
 
         logError: function (error, details, entityName) {
 
