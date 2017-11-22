@@ -2,7 +2,16 @@ var AppLog = (function () {
 
     var enescapeHtml = function (s) {
 
-        return s.replace(/\&#47;/mg, '/').replace(/\&#63;/mg, '?').replace(/\&#61;/mg, '=').replace(/\&#38;/mg, '&').replace(/\&#37;/mg, '%').replace(/\&#40;/mg, '(').replace(/\&#41;/mg, ')').replace(/\&#58;/mg, ':').replace(/\&#59;/mg, ';').replace(/\&#35;/mg, '#');
+        return s.replace(/\&#47;/mg, '/')
+            .replace(/\&#63;/mg, '?')
+            .replace(/\&#61;/mg, '=')
+            .replace(/\&#38;/mg, '&')
+            .replace(/\&#37;/mg, '%')
+            .replace(/\&#40;/mg, '(')
+            .replace(/\&#41;/mg, ')')
+            .replace(/\&#58;/mg, ':')
+            .replace(/\&#59;/mg, ';')
+            .replace(/\&#35;/mg, '#');
     };
 
     return {
@@ -13,8 +22,7 @@ var AppLog = (function () {
 
             if (top.Mscrm.ScriptErrorReporting !== null && top.Mscrm.ScriptErrorReporting.$1m != null) {
 
-                debugger;
-                console.log(top.Mscrm.ScriptErrorReporting.$1m);
+                //console.log(top.Mscrm.ScriptErrorReporting.$1m);
 
                 var entityName = Xrm.Page.data.entity.getEntityName();
                 var entityId = Xrm.Page.data.entity.getId();
