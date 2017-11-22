@@ -46,7 +46,7 @@ var AppLog = (function () {
         log: function (event, details, entityName) {
             
             AppLog.logEvent(event, 1, details, entityName);
-            console.info(event + "\n" + entityName + "\n" + details);
+            console.log(event + "\n" + entityName + "\n" + details);
         },          
 
         logInfo: function (event, details, entityName) {
